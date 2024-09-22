@@ -9,6 +9,6 @@ const VerifyUser_1 = require("../Middleware/VerifyUser");
 const router = express_1.default.Router();
 router.post('/register', registerController_1.registerUsers);
 router.get('/', VerifyUser_1.verifyUser, registerController_1.userData);
-router.get('/login', registerController_1.login);
+router.post('/login', registerController_1.login);
 router.delete('/delete', VerifyUser_1.verifyUser, registerController_1.delUser);
 exports.default = router;
